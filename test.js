@@ -1,15 +1,7 @@
-videojs.registerPlugin('listenForParent', function() {
-  var myPlayer = this;
-  // This method called when postMessage sends data into the iframe
-  function controlVideo(evt){
-    if(evt.data === "playVideo") {
-      myPlayer.play();
-      console.log("PLAYING")
-    } else if (evt.data === 'pauseVideo') {
-      myPlayer.pause();
-      console.log("PAUSED")
-    }
-  };
-  // Listen for the message, then call controlVideo() method when received
-  window.addEventListener("message",controlVideo);
-});
+$("body").on("click", ".video-js.vjs-mouse .vjs-big-play-button", function () {
+          alert("BC js video called")
+  alert()
+        })
+        $("body").on("click",".video-js .vjs-play-control", function () {
+          alert("BC js Play and Pause video called")
+        })
