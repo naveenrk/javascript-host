@@ -1,7 +1,7 @@
-$("body").on("click", ".video-js.vjs-mouse .vjs-big-play-button", function () {
+document.getElementByClassName("vjs-big-play-button").addEventListener('click',function () {
           alert("BC js video called")
-  alert()
+  
         })
-        $("body").on("click",".video-js .vjs-play-control", function () {
+document.getElementByClassName("vjs-play-control").addEventListener('click', function () {
           alert("BC js Play and Pause video called")
         })
