@@ -4,8 +4,10 @@ videojs.registerPlugin('listenForParent', function() {
   function controlVideo(evt){
     if(evt.data === "playVideo") {
       myPlayer.play();
+      console.log("PLAYING")
     } else if (evt.data === 'pauseVideo') {
       myPlayer.pause();
+      console.log("PAUSED")
     }
   };
   // Listen for the message, then call controlVideo() method when received
